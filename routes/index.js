@@ -1,9 +1,10 @@
 const express = require("express");
 const route = express.Router();
-
-route.get("/question",(req, res)=>{
-    console.log("api is working");
-    return res.send("its working");
-})
+const questionRoute = require("./question.route")
+const testRoute = require("./test.route")
+const assessmentRoute = require("./assessment.route")
+route.get("/assessment", assessmentRoute);
+route.get("/test", testRoute);
+route.get("/question",questionRoute);
 
 module.exports =  route;
