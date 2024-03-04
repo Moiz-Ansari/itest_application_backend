@@ -10,7 +10,7 @@ app.use(morgan());
 //for header related security
 // app.use(helmet());
 //to parse json data sent into the request body
-app.use(express.json());//middileware
+app.use(express.json("ITS WORKING FINE"));//middileware
 //parse array or object from request url
 app.use(express.urlencoded());//middileware
 
